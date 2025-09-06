@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Apex Corporate Law{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{{ url_for('home') }}">Apex Corporate Law</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-link">About Us</a>
+                <a href="{{ url_for('services') }}" class="nav-link">Our Services</a>
+                <a href="{{ url_for('track_record') }}" class="nav-link">Track Record</a>
+                <a href="{{ url_for('media') }}" class="nav-link">Media & Recognition</a>
+                <a href="#" onclick="openContactModal()" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Apex Corporate Law</h3>
+                    <p>Billions move when we speak</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="#" onclick="openContactModal()">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>New York • London • Dubai</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apex Corporate Law. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Speak with a Partner</h2>
+                <span class="close" onclick="closeContactModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="modal-contact-form" id="modalContactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modal-name">Full Name</label>
+                            <input type="text" id="modal-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-email">Email</label>
+                            <input type="email" id="modal-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modal-phone">Phone</label>
+                            <input type="tel" id="modal-phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-company">Company</label>
+                            <input type="text" id="modal-company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-subject">Subject</label>
+                        <select id="modal-subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="mergers">Mergers & Acquisitions</option>
+                            <option value="governance">Corporate Governance</option>
+                            <option value="compliance">Regulatory & Compliance</option>
+                            <option value="private-equity">Private Equity & VC</option>
+                            <option value="cross-border">Cross-Border Transactions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-message">Message</label>
+                        <textarea id="modal-message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="modal-submit-button">
+                        <span class="button-text">Send Message</span>
+                        <div class="button-loader" style="display: none;">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                    <div id="modal-form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

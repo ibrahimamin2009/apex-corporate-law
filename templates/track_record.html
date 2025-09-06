@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Track Record - Apex Corporate Law{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="futuristic-title">Track Record</h1>
+        <p class="futuristic-subtitle">Proven results in the world's most complex transactions</p>
+    </div>
+</section>
+
+<section class="signature-transactions">
+    <div class="container">
+        <h2>Signature Transactions</h2>
+        <div class="transactions-grid">
+            <div class="transaction-item">
+                <div class="transaction-year">2022</div>
+                <h3>Energy (Europe)</h3>
+                <p>Advised on one of the region's largest energy mergers, valued at over $30B.</p>
+            </div>
+            <div class="transaction-item">
+                <div class="transaction-year">2021</div>
+                <h3>Technology (Global)</h3>
+                <p>Guided a Fortune 100 company through a $45B cross-border acquisition.</p>
+            </div>
+            <div class="transaction-item">
+                <div class="transaction-year">2020</div>
+                <h3>Finance (North America)</h3>
+                <p>Represented a Fortune 500 financial services leader in a $10B restructuring.</p>
+            </div>
+            <div class="transaction-item">
+                <div class="transaction-year">2019</div>
+                <h3>Healthcare (Asia)</h3>
+                <p>Supported a multinational pharma group in a $12B joint venture.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="recognition-rankings">
+    <div class="container">
+        <h2>Recognition and Rankings</h2>
+        <div class="recognition-list">
+            <div class="recognition-item">
+                <h3>Chambers & Partners</h3>
+                <p>Ranked among Top Corporate Law Firms</p>
+            </div>
+            <div class="recognition-item">
+                <h3>Legal 500</h3>
+                <p>Consistently ranked in top tier of global M&A advisors</p>
+            </div>
+            <div class="recognition-item">
+                <h3>Forbes</h3>
+                <p>Recognized for landmark transactions</p>
+            </div>
+            <div class="recognition-item">
+                <h3>Bloomberg</h3>
+                <p>Featured in financial media for major deals</p>
+            </div>
+            <div class="recognition-item">
+                <h3>Financial Times</h3>
+                <p>Consistently ranked in top tier of global M&A advisors</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="track-record-contact">
+    <div class="container">
+        <h2>Ready to Make History?</h2>
+        <p>Let's discuss your next major transaction</p>
+        <form class="track-record-contact-form" id="trackRecordContactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="track-name">Name</label>
+                    <input type="text" id="track-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="track-email">Email</label>
+                    <input type="email" id="track-email" name="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="track-phone">Phone</label>
+                    <input type="tel" id="track-phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="track-reason">Transaction Type</label>
+                    <select id="track-reason" name="reason" required>
+                        <option value="">Select transaction type</option>
+                        <option value="merger">Merger</option>
+                        <option value="acquisition">Acquisition</option>
+                        <option value="restructuring">Restructuring</option>
+                        <option value="joint-venture">Joint Venture</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="track-submit-button">
+                <span class="button-text">Start Your Deal</span>
+                <div class="button-loader" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+            </button>
+            <div id="track-form-message" class="form-message"></div>
+        </form>
+    </div>
+</section>
+{% endblock %}

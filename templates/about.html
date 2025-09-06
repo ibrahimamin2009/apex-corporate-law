@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Apex Corporate Law{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="futuristic-title">About Us</h1>
+        <p class="futuristic-subtitle">Excellence in corporate law since the early 2000s</p>
+    </div>
+</section>
+
+<section class="our-story">
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>Apex was built on one principle: when the stakes are highest, only precision and strategy matter. From our first cross-border transaction in the early 2000s to today's billion-dollar mergers, we have advised boards and executives on decisions that reshape industries.</p>
+    </div>
+</section>
+
+<section class="who-we-serve">
+    <div class="container">
+        <h2>Who We Serve</h2>
+        <p>From Fortune 500 corporations to global market leaders, Apex represents businesses at the center of finance, technology, energy, healthcare, and beyond. Whether guiding a complex merger, structuring private equity investments, or navigating shifting regulations, our role remains the same: deliver clarity, certainty, and results.</p>
+    </div>
+</section>
+
+<section class="our-edge">
+    <div class="container">
+        <h2>Our Edge</h2>
+        <div class="edge-grid">
+            <div class="edge-item">
+                <h3>Scale</h3>
+                <p>Over $300B in transactions successfully closed.</p>
+            </div>
+            <div class="edge-item">
+                <h3>Global Reach</h3>
+                <p>Offices in the world's financial capitals, advising across borders and time zones.</p>
+            </div>
+            <div class="edge-item">
+                <h3>Trust</h3>
+                <p>Chosen advisors to over 40 Fortune 500 companies.</p>
+            </div>
+            <div class="edge-item">
+                <h3>Recognition</h3>
+                <p>Ranked among the world's top corporate law firms by Chambers, Legal 500, and international business media.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quick-contact">
+    <div class="container">
+        <h2>Ready to Work with Us?</h2>
+        <p>Get in touch with our team for a consultation</p>
+        <form class="quick-contact-form" id="quickContactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quick-name">Name</label>
+                    <input type="text" id="quick-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="quick-email">Email</label>
+                    <input type="email" id="quick-email" name="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quick-phone">Phone</label>
+                    <input type="tel" id="quick-phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="quick-reason">Reason for Contact</label>
+                    <select id="quick-reason" name="reason" required>
+                        <option value="">Select a reason</option>
+                        <option value="consultation">Legal Consultation</option>
+                        <option value="merger">Merger & Acquisition</option>
+                        <option value="governance">Corporate Governance</option>
+                        <option value="compliance">Regulatory Compliance</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="quick-submit-button">
+                <span class="button-text">Send Message</span>
+                <div class="button-loader" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+            </button>
+            <div id="quick-form-message" class="form-message"></div>
+        </form>
+    </div>
+</section>
+{% endblock %}

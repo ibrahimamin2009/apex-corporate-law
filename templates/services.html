@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - Apex Corporate Law{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="futuristic-title">Our Services</h1>
+        <p class="futuristic-subtitle">Comprehensive legal solutions for global business leaders</p>
+    </div>
+</section>
+
+<section class="services-detailed">
+    <div class="container">
+        <div class="service-detail">
+            <h2>Mergers & Acquisitions</h2>
+            <p class="service-subtitle">Precision in billion-dollar deals. End-to-end guidance on high-value transactions — from due diligence to negotiation and integration.</p>
+            <h3>We deliver:</h3>
+            <ul>
+                <li>Cross-border structuring</li>
+                <li>Deal negotiation & financing</li>
+                <li>Post-merger integration</li>
+            </ul>
+        </div>
+
+        <div class="service-detail">
+            <h2>Corporate Governance</h2>
+            <p class="service-subtitle">Advising boards that shape industries. Counseling boards and executives on governance, shareholder relations, and crisis management.</p>
+            <h3>We deliver:</h3>
+            <ul>
+                <li>Board & fiduciary guidance</li>
+                <li>Shareholder strategies</li>
+                <li>Risk oversight</li>
+            </ul>
+        </div>
+
+        <div class="service-detail">
+            <h2>Regulatory & Compliance</h2>
+            <p class="service-subtitle">Navigating complexity with certainty. Helping corporations manage risk and expand across jurisdictions with confidence.</p>
+            <h3>We deliver:</h3>
+            <ul>
+                <li>Multi-jurisdictional compliance</li>
+                <li>Antitrust & competition law</li>
+                <li>Regulatory approvals</li>
+            </ul>
+        </div>
+
+        <div class="service-detail">
+            <h2>Private Equity & Venture Capital</h2>
+            <p class="service-subtitle">Guiding investments that fuel innovation. Advising funds, investors, and portfolio companies on structuring and executing growth-driven deals.</p>
+            <h3>We deliver:</h3>
+            <ul>
+                <li>Fund structuring</li>
+                <li>Buyouts & exits</li>
+                <li>Venture financing</li>
+            </ul>
+        </div>
+
+        <div class="service-detail">
+            <h2>Cross-Border Transactions</h2>
+            <p class="service-subtitle">Global reach, local expertise. Seamless coordination of deals across financial hubs, legal systems, and tax regimes.</p>
+            <h3>We deliver:</h3>
+            <ul>
+                <li>International structuring</li>
+                <li>Tax & regulatory harmonization</li>
+                <li>Foreign investment approvals</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="service-contact">
+    <div class="container">
+        <h2>Need Our Services?</h2>
+        <p>Contact us to discuss your legal requirements</p>
+        <form class="service-contact-form" id="serviceContactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service-name">Name</label>
+                    <input type="text" id="service-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-email">Email</label>
+                    <input type="email" id="service-email" name="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service-phone">Phone</label>
+                    <input type="tel" id="service-phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service-reason">Service Interest</label>
+                    <select id="service-reason" name="reason" required>
+                        <option value="">Select a service</option>
+                        <option value="mergers">Mergers & Acquisitions</option>
+                        <option value="governance">Corporate Governance</option>
+                        <option value="compliance">Regulatory & Compliance</option>
+                        <option value="private-equity">Private Equity & VC</option>
+                        <option value="cross-border">Cross-Border Transactions</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="service-submit-button">
+                <span class="button-text">Get Started</span>
+                <div class="button-loader" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+            </button>
+            <div id="service-form-message" class="form-message"></div>
+        </form>
+    </div>
+</section>
+{% endblock %}

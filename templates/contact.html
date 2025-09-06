@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Apex Corporate Law{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Ready to discuss your next high-stakes transaction?</p>
+    </div>
+</section>
+
+<section class="contact-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Speak with a Partner</h2>
+            <p>Our partners are available to discuss your corporate law needs and how we can help achieve your strategic objectives.</p>
+            <a href="mailto:partners@apexcorporatelaw.com" class="cta-button">Contact a Partner</a>
+        </div>
+    </div>
+</section>
+
+<section class="office-locations">
+    <div class="container">
+        <h2>Our Global Offices</h2>
+        <div class="offices-grid">
+            <div class="office-card">
+                <h3>New York</h3>
+                <p class="office-title">Headquarters</p>
+                <div class="office-address">
+                    <p>Apex Corporate Law</p>
+                    <p>One World Trade Center, 85th Floor</p>
+                    <p>New York, NY 10007, USA</p>
+                </div>
+                <div class="office-contact">
+                    <p>Phone: +1 (212) 555-0100</p>
+                    <p>Email: ny@apexcorporatelaw.com</p>
+                </div>
+            </div>
+            
+            <div class="office-card">
+                <h3>London</h3>
+                <p class="office-title">European Headquarters</p>
+                <div class="office-address">
+                    <p>Apex Corporate Law</p>
+                    <p>100 Bishopsgate</p>
+                    <p>London EC2N 4AG, United Kingdom</p>
+                </div>
+                <div class="office-contact">
+                    <p>Phone: +44 20 7123 4567</p>
+                    <p>Email: london@apexcorporatelaw.com</p>
+                </div>
+            </div>
+            
+            <div class="office-card">
+                <h3>Dubai</h3>
+                <p class="office-title">Middle East & Africa</p>
+                <div class="office-address">
+                    <p>Apex Corporate Law</p>
+                    <p>Level 29, Emirates Towers</p>
+                    <p>Dubai International Financial Centre, UAE</p>
+                </div>
+                <div class="office-contact">
+                    <p>Phone: +971 4 123 4567</p>
+                    <p>Email: dubai@apexcorporatelaw.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-form" id="contact-form">
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <form class="contact-form-content" id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="mergers">Mergers & Acquisitions</option>
+                    <option value="governance">Corporate Governance</option>
+                    <option value="compliance">Regulatory & Compliance</option>
+                    <option value="private-equity">Private Equity & VC</option>
+                    <option value="cross-border">Cross-Border Transactions</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">
+                <span class="button-text">Send Message</span>
+                <div class="button-loader" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+            </button>
+            <div id="form-message" class="form-message"></div>
+        </form>
+    </div>
+</section>
+{% endblock %}

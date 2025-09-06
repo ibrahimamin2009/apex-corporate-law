@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Media & Recognition - Apex Corporate Law{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="futuristic-title">Media & Recognition</h1>
+        <p class="futuristic-subtitle">Industry recognition and media coverage of our achievements</p>
+    </div>
+</section>
+
+<section class="press-highlights">
+    <div class="container">
+        <h2>Press Highlights</h2>
+        <div class="press-grid">
+            <div class="press-item">
+                <h3>"Top Law Firms Driving Global M&A in 2025"</h3>
+                <p class="press-source">Financial Times</p>
+                <p class="press-excerpt">Apex Corporate Law continues to lead in complex cross-border transactions, setting new standards for deal structuring and execution.</p>
+            </div>
+            <div class="press-item">
+                <h3>"Advisors Behind the $45B Tech Acquisition"</h3>
+                <p class="press-source">Bloomberg</p>
+                <p class="press-excerpt">The firm's strategic guidance was instrumental in navigating regulatory complexities across multiple jurisdictions.</p>
+            </div>
+            <div class="press-item">
+                <h3>"The Future of Cross-Border Deals: Expert Insights from Apex"</h3>
+                <p class="press-source">Forbes</p>
+                <p class="press-excerpt">Our partners share insights on emerging trends in international M&A and regulatory compliance.</p>
+            </div>
+            <div class="press-item">
+                <h3>"Ranked: Chambers Global Guide – Corporate/M&A (Tier 1)"</h3>
+                <p class="press-source">Chambers & Partners</p>
+                <p class="press-excerpt">Consistently recognized for excellence in corporate law and M&A advisory services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="awards-recognition">
+    <div class="container">
+        <h2>Awards & Recognition</h2>
+        <div class="awards-grid">
+            <div class="award-item">
+                <h3>Chambers Global</h3>
+                <p>Tier 1 - Corporate/M&A</p>
+                <span class="award-year">2024</span>
+            </div>
+            <div class="award-item">
+                <h3>Legal 500</h3>
+                <p>Top Tier - M&A</p>
+                <span class="award-year">2024</span>
+            </div>
+            <div class="award-item">
+                <h3>IFLR1000</h3>
+                <p>Highly Regarded - M&A</p>
+                <span class="award-year">2024</span>
+            </div>
+            <div class="award-item">
+                <h3>Who's Who Legal</h3>
+                <p>Leading Individual - Corporate</p>
+                <span class="award-year">2024</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="media-contact">
+    <div class="container">
+        <h2>Join Our Success Story</h2>
+        <p>Partner with the industry's most recognized firm</p>
+        <form class="media-contact-form" id="mediaContactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="media-name">Name</label>
+                    <input type="text" id="media-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="media-email">Email</label>
+                    <input type="email" id="media-email" name="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="media-phone">Phone</label>
+                    <input type="tel" id="media-phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="media-reason">Partnership Interest</label>
+                    <select id="media-reason" name="reason" required>
+                        <option value="">Select partnership type</option>
+                        <option value="client">Become a Client</option>
+                        <option value="referral">Referral Partnership</option>
+                        <option value="media">Media Inquiry</option>
+                        <option value="career">Career Opportunity</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="media-submit-button">
+                <span class="button-text">Partner With Us</span>
+                <div class="button-loader" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
+            </button>
+            <div id="media-form-message" class="form-message"></div>
+        </form>
+    </div>
+</section>
+{% endblock %}
