@@ -55,3 +55,4 @@ Thumbs.db
 
 # Email credentials (keep config.py but ignore actual credentials)
 # config.py should be committed but with placeholder values
+.vercel
