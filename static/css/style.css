@@ -109,44 +109,17 @@ h3 {
     align-items: center;
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.nav-logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: #D4AF37;
     text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.logo-link:hover {
+.nav-logo a:hover {
     color: #FFD700;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-    transform: scale(1.05);
-}
-
-.logo-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
-}
-
-.logo-link:hover .logo-image {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.5);
-    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
-}
-
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif;
 }
 
 .nav-menu {
@@ -1522,19 +1495,6 @@ h3 {
     
     .nav-menu.active {
         left: 0;
-    }
-    
-    .logo-link {
-        gap: 8px;
-    }
-    
-    .logo-image {
-        width: 32px;
-        height: 32px;
-    }
-    
-    .logo-text {
-        font-size: 1.4rem;
     }
     
     .nav-menu a {
